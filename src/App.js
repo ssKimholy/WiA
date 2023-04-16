@@ -9,6 +9,7 @@ import floor2 from './imgs/2f.jpg'
 import floor3 from './imgs/3f.jpg'
 import floor4 from './imgs/4f.jpg'
 import floor5 from './imgs/5f.jpg'
+import { motion } from 'framer-motion';
 
 const TopContainer = styled.div`
   width: 100vw;
@@ -32,7 +33,7 @@ const Mainbg = styled.div` //배경화면 흰색으로 만들기 위함.
   z-index: 0;
 `
 
-const Title = styled.div`
+const Title = styled(motion.div)`
     margin-top: 10vh;
     z-index: 2;
     width: 100%;
@@ -52,6 +53,14 @@ const Title = styled.div`
 
 `
 
+const TitleVariants = {
+  hover : {
+    scale: 1.2
+  }
+}
+
+
+
 const BoxContainer = styled.div`
     z-index: 2;
     display: grid;
@@ -60,14 +69,26 @@ const BoxContainer = styled.div`
       grid-template-columns: 1fr;
     }
     @media (min-width: 770px) {
-      grid-template-columns: 1fr 1fr;
+      /* grid-template-columns: 1fr 1fr; */
     }
     @media (min-width: 1020px) {
-      grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-columns: 1fr 1fr 1fr; */
     }
     @media (min-width: 1300px) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     }
+`
+
+const SecondBox = styled.div`
+  display: flex;
+`
+
+const BoxInfo = styled.div`
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
 `
 
 
@@ -78,17 +99,29 @@ function App() {
 
     <TopContainer>
 
-      <Title>WIA</Title>
+      <Title variants={TitleVariants} whileHover={"hover"}>WIA</Title>
       
 
       <BoxContainer>
-        <Box text="B2F" backImg={floorB2}></Box>
-        <Box text="B1F" backImg={floorB1}></Box>
-        <Box text="1F" backImg={floor1}></Box>
-        <Box text="2F" backImg={floor2}></Box>
-        <Box text="3F" backImg={floor3}></Box>
+          <SecondBox>
+          <Box text="5F" backImg={floor5}></Box>
+          <BoxInfo>
+            제3자료실<br/><br/>
+            자료실<br/><br/>
+            개인문고, 참고도서<br/><br/>
+            고서실
+          </BoxInfo>
+          </SecondBox>
+        
+
         <Box text="4F" backImg={floor4}></Box>
-        <Box text="5F" backImg={floor5}></Box>
+        
+        <Box text="3F" backImg={floor3}></Box>
+
+        <Box text="2F" backImg={floor2}></Box>
+
+        <Box text="1F" backImg={floor1}></Box>
+
       </BoxContainer>
 
       <Mainbg/>

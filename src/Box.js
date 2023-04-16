@@ -15,6 +15,26 @@ const TopContainer = styled.div`
     background-size: cover;
     position: relative;
     z-index: 2;
+
+    @media (min-width: 0px) {
+        width: 200px;
+        height: 130px;
+    }
+    /* @media (min-width: 770px) {
+        width: 750px;
+        height: 200px;
+    } */
+    /* @media (min-width: 1020px) {
+        width: 1000px;
+        height: 200px;
+    } */
+    /* @media (min-width: 1300px) {
+        width: 1200px;
+        height: 200px;
+    } */
+
+
+
 `
 
 const Bg = styled.div`
