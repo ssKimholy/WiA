@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import GlobalStyles from './GrobalStyles';
 import mainBg from "./imgs/mainBg.png";
 import Box from './Box';
-import floorB2 from './imgs/b2f.jpg'
-import floorB1 from './imgs/b1f.jpg'
 import floor1 from './imgs/1f.jpg'
 import floor2 from './imgs/2f.jpg'
 import floor3 from './imgs/3f.jpg'
@@ -62,6 +60,8 @@ const TitleVariants = {
 
 
 const BoxContainer = styled.div`
+    width: 100%;
+    place-items: center;
     z-index: 2;
     display: grid;
     margin-top: 10vh;
@@ -81,14 +81,22 @@ const BoxContainer = styled.div`
 
 const SecondBox = styled.div`
   display: flex;
+  margin-bottom: 20px;
 `
 
 const BoxInfo = styled.div`
   width: 150px;
   display: flex;
   align-items: center;
-  justify-content: center;
   font-weight: 700;
+  margin-left: 20px;
+  @media (min-width: 0px) {
+        font-size: 17px;
+    }
+    @media (min-width: 770px) {
+      width: 300px;
+      font-size: 25px;
+    }
 `
 
 
@@ -109,19 +117,43 @@ function App() {
             제3자료실<br/><br/>
             자료실<br/><br/>
             개인문고, 참고도서<br/><br/>
-            고서실
           </BoxInfo>
           </SecondBox>
         
+          <SecondBox>
+          <Box text="4F" backImg={floor4}></Box>
+          <BoxInfo>
+            제2자료실<br/><br/>
+            대출실<br/><br/>
+            제1자료실<br/><br/>
+          </BoxInfo>
+          </SecondBox>
 
-        <Box text="4F" backImg={floor4}></Box>
-        
+          <SecondBox>
         <Box text="3F" backImg={floor3}></Box>
+            <BoxInfo>
+            외국 학술지 지원센터<br/><br/>
+            연속 간행물실
+            </BoxInfo>
+        </SecondBox>
 
+        <SecondBox>
         <Box text="2F" backImg={floor2}></Box>
+          <BoxInfo>
+            제1열람실<br/><br/>
+            제2열람실<br/><br/>
+            제3열람실<br/><br/>
+            장애인 열람실
+          </BoxInfo>
+        </SecondBox>
 
+        <SecondBox>
         <Box text="1F" backImg={floor1}></Box>
-
+          <BoxInfo>
+            아우룸<br/><br/>
+            99th street
+          </BoxInfo>
+        </SecondBox>
       </BoxContainer>
 
       <Mainbg/>

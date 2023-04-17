@@ -15,18 +15,21 @@ const TopContainer = styled.div`
     background-size: cover;
     position: relative;
     z-index: 2;
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
 
     @media (min-width: 0px) {
-        width: 200px;
+        width: 160px;
         height: 130px;
     }
-    /* @media (min-width: 770px) {
-        width: 750px;
-        height: 200px;
-    } */
+    @media (min-width: 770px) {
+        width: 300px;
+        height: 250px;
+    }
     /* @media (min-width: 1020px) {
-        width: 1000px;
-        height: 200px;
+        width: 400px;
+        height: 350px;
     } */
     /* @media (min-width: 1300px) {
         width: 1200px;
@@ -49,10 +52,11 @@ const Bg = styled.div`
     font-size: 50px;
     font-weight: 700;
     cursor: pointer;
-
+    color: white;
     &:hover{
-        background-color: rgba(255,255,255, 0.2);
-
+        background-color: rgba(255,255,255, 0.4);
+        color: black;
+        font-size: 70px;
     }
 `
 
