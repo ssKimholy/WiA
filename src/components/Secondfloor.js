@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { call_api } from '../apiCall/wifi_call';
 
-import mainImg from "../imgs/f1section.jpg";
-import mainBg from "../imgs/1f.jpg";
+import mainImg from "../imgs/f2section.jpg";
+import mainBg from "../imgs/2f.jpg";
 
 
 const TopContainer = styled.div`
@@ -37,6 +37,7 @@ const MainTitle = styled.div`
     width:100%;
     height: 10vh;
     padding-top: 1vh; //임시로 해봄 너무 천장에 붙어있어서
+    z-index: 2;
 
     @media (min-width: 0px) {
       font-size: 30px;
@@ -46,7 +47,6 @@ const MainTitle = styled.div`
     @media (min-width: 770px) {
       font-size: 40px;
     }
-    z-index: 2;
 `
 
 const SecondContainer = styled.div`
@@ -89,6 +89,7 @@ const SectionContainer = styled.div`
     justify-content: center;
     width: 40vw;
     height:30vw;
+    
 `
 
 const Section = styled(Link)`
@@ -105,7 +106,7 @@ const Section = styled(Link)`
     }
 `
 
-function Firstfloor() {
+function Secondfloor() {
 
     // console.log("function first");
     // useEffect(() => {
@@ -123,17 +124,18 @@ function Firstfloor() {
 
     return(
         <TopContainer>
-            <MainTitle>1층</MainTitle>
+            <MainTitle>2층</MainTitle>
             <SecondContainer>
                 <MainImg src={mainImg} />
                 <SectionContainer>
-                    <Section to={"section1"}>section1</Section>
-                    <Section to={"section2"}>section2</Section>
+                    <Section to={"section3"}>section3</Section>
+                    <Section to={"section4"}>section4</Section>
+                    <Section to={"section5"}>section5</Section>
                 </SectionContainer>
             </SecondContainer>
-            <Mainbg/>
+            <Mainbg />
         </TopContainer>
     );
 }
 
-export default Firstfloor;
+export default Secondfloor;

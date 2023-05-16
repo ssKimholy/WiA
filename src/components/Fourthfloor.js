@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { call_api } from '../apiCall/wifi_call';
 
-import mainImg from "../imgs/f1section.jpg";
-import mainBg from "../imgs/1f.jpg";
+import mainImg from "../imgs/f4section.jpg";
+import mainBg from "../imgs/4f.jpg";
 
 
 const TopContainer = styled.div`
@@ -22,7 +22,6 @@ const TopContainer = styled.div`
   flex-direction: column;
   overflow-y: scroll;
 `
-
 const Mainbg = styled.div` //배경화면 흰색으로 만들기 위함.
   width: 100%;
   height: 100%;
@@ -32,12 +31,13 @@ const Mainbg = styled.div` //배경화면 흰색으로 만들기 위함.
 `
 
 
+
 const MainTitle = styled.div`
     text-align: center;
     width:100%;
     height: 10vh;
     padding-top: 1vh; //임시로 해봄 너무 천장에 붙어있어서
-
+    z-index: 2;
     @media (min-width: 0px) {
       font-size: 30px;
       font-weight: 700;
@@ -46,7 +46,6 @@ const MainTitle = styled.div`
     @media (min-width: 770px) {
       font-size: 40px;
     }
-    z-index: 2;
 `
 
 const SecondContainer = styled.div`
@@ -56,7 +55,6 @@ const SecondContainer = styled.div`
  justify-content: space-around;
  align-items: center;
  z-index: 2;
-
     @media (min-width: 0px) {
       flex-direction: column;
       
@@ -105,7 +103,7 @@ const Section = styled(Link)`
     }
 `
 
-function Firstfloor() {
+function Fourthfloor() {
 
     // console.log("function first");
     // useEffect(() => {
@@ -123,17 +121,17 @@ function Firstfloor() {
 
     return(
         <TopContainer>
-            <MainTitle>1층</MainTitle>
+            <MainTitle>4층</MainTitle>
             <SecondContainer>
                 <MainImg src={mainImg} />
                 <SectionContainer>
-                    <Section to={"section1"}>section1</Section>
-                    <Section to={"section2"}>section2</Section>
+                    <Section to={"section7"}>section7</Section>
+                    <Section to={"section8"}>section8</Section>
                 </SectionContainer>
             </SecondContainer>
-            <Mainbg/>
+            <Mainbg />
         </TopContainer>
     );
 }
 
-export default Firstfloor;
+export default Fourthfloor;
