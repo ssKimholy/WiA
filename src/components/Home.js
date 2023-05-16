@@ -8,6 +8,10 @@ import floor4 from '../imgs/4f.jpg'
 import floor5 from '../imgs/5f.jpg'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { call_api } from '../apiCall/wifi_call';
+
+
 
 const TopContainer = styled.div`
   width: 100vw;
@@ -100,6 +104,16 @@ const BoxInfo = styled.div`
 `
 
 function Home(){
+
+    // console.log("function first");
+    // useEffect(() => {
+    //     console.log("useEffect first")
+    //     call_api();
+    //     setInterval(() => {
+    //         console.log("setInterval");
+    //         call_api();
+    //     }, 45000);
+    // }, []);
 
     return(
         <TopContainer>

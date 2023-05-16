@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+
+import { useEffect } from 'react';
+import { call_api } from '../apiCall/wifi_call';
+
 import mainImg from "../imgs/f1section.jpg";
+
 
 
 const TopContainer = styled.div`
@@ -84,6 +89,20 @@ const Section = styled(Link)`
 `
 
 function Firstfloor() {
+
+    // console.log("function first");
+    // useEffect(() => {
+    //     console.log("useEffect first")
+    //     call_api();
+    //     setInterval(() => {
+    //         console.log("setInterval");
+    //         call_api();
+    //     }, 45000);
+    //     // setInterval(() => {
+    //     //     call_api();
+    //     // }, 50000);
+        
+    // }, []);
 
     return(
         <TopContainer>

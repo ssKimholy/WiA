@@ -3,9 +3,30 @@ import GlobalStyles from "./GrobalStyles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 import Firstfloor from './components/Firstfloor';
+
+import { useEffect } from 'react';
+import { call_api } from '../src/apiCall/wifi_call';
+
 import Section1 from './components/Section1';
 
+
 function App() {
+
+  // console.log("function first");
+  // useEffect(() => {
+  //   console.log("useEffect first");
+  //   call_api(); // call immediately
+
+  //   const intervalId = setInterval(() => {
+  //       call_api(); // call every 45 seconds
+  //   }, 45000);
+
+  //   // Return a cleanup function to clear the interval on unmount
+  //   return () => {
+  //       clearInterval(intervalId);
+  //   };
+  // }, []);
+
   return (
     <>
       <BrowserRouter>
