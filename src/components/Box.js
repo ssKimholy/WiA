@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
-
-const TopContainer = styled.div`
+const TopContainer = styled(Link)`
     width: 300px;
     height: 250px;
     /* background-color: tomato; */
@@ -64,7 +64,7 @@ const Bg = styled.div`
 function Box(props) {
 
     return (
-        <TopContainer backImg={props.backImg}>
+        <TopContainer backImg={props.backImg} to={props.text}>
             <Bg>{props.text}</Bg>
         </TopContainer>
     );
