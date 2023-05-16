@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import floor1 from '../imgs/1f.jpg'
 import { motion } from 'framer-motion';
-import homeImg from"../imgs/house-solid.svg";
 import mainImg from "../imgs/f1section.jpg";
 
 
@@ -15,12 +13,19 @@ const TopContainer = styled.div`
 
 
 const MainTitle = styled.div`
-    font-size: 70px;
     text-align: center;
-    font-weight: 600;
     width:100%;
     height: 10vh;
     padding-top: 1vh; //임시로 해봄 너무 천장에 붙어있어서
+
+    @media (min-width: 0px) {
+      font-size: 30px;
+      font-weight: 700;
+      
+    }
+    @media (min-width: 770px) {
+      font-size: 40px;
+    }
 `
 
 const SecondContainer = styled.div`
@@ -29,24 +34,53 @@ const SecondContainer = styled.div`
  display: flex;
  justify-content: space-around;
  align-items: center;
+
+    @media (min-width: 0px) {
+      flex-direction: column;
+      
+    }
+    @media (min-width: 770px) {
+      flex-direction: row;
+    }
 `
 
-const MainImg = styled.div`
-    width:40vw;
-    height:50vh;
-    background-image: url(${mainImg});
+const MainImg = styled.img`
+    /* background-image: url(${mainImg});
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
+
+    @media (min-width: 0px) {
+        width:70vw;
+        height:70vw;
+      
+    }
+    @media (min-width: 770px) {
+        width:40vw;
+        height:40vw;
+    }
 `
 
 const SectionContainer = styled.div`
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height:30vw;
 `
 
 const Section = styled(Link)`
-    font-size: 50px;
     font-weight: 500;
-    display: block;
+    margin: 0.5vw;
+
+    @media (min-width: 0px) {
+      font-size: 20px;
+      font-weight: 500;
+      
+    }
+    @media (min-width: 770px) {
+      font-size: 45px;
+    }
 `
 
 function Firstfloor() {
@@ -55,7 +89,7 @@ function Firstfloor() {
         <TopContainer>
             <MainTitle>1층</MainTitle>
             <SecondContainer>
-                <MainImg></MainImg>
+                <MainImg src={mainImg} />
                 <SectionContainer>
                     <Section to={"section1"}>section1</Section>
                     <Section to={"section2"}>section2</Section>
