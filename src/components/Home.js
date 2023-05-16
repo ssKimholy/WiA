@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { call_api } from '../apiCall/wifi_call';
+import { detailWifi } from '../datas/mapping';
 
 
 
@@ -105,15 +106,8 @@ const BoxInfo = styled.div`
 
 function Home(){
 
-    // console.log("function first");
-    // useEffect(() => {
-    //     console.log("useEffect first")
-    //     call_api();
-    //     setInterval(() => {
-    //         console.log("setInterval");
-    //         call_api();
-    //     }, 45000);
-    // }, []);
+    useEffect(() => {
+    }, []);
 
     return(
         <TopContainer>
