@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import floor1 from '../imgs/1f.jpg'
 import { motion } from 'framer-motion';
 import homeImg from"../imgs/house-solid.svg";
+import { useEffect } from 'react';
+import { call_api } from '../apiCall/wifi_call';
 
 
 const TopContainer = styled.div`
@@ -34,6 +36,20 @@ const Section = styled(Link)`
 `
 
 function Firstfloor() {
+
+    // console.log("function first");
+    // useEffect(() => {
+    //     console.log("useEffect first")
+    //     call_api();
+    //     setInterval(() => {
+    //         console.log("setInterval");
+    //         call_api();
+    //     }, 45000);
+    //     // setInterval(() => {
+    //     //     call_api();
+    //     // }, 50000);
+        
+    // }, []);
 
     return(
         <TopContainer>
