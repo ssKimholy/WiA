@@ -14,6 +14,15 @@ import { useEffect } from 'react';
 import { call_api } from '../src/apiCall/wifi_call';
 
 import Section1 from './components/Section1';
+import Section2 from './components/Section2';
+import Section3 from './components/Section3';
+import Section4 from './components/Section4';
+import Section5 from './components/Section5';
+import Section6 from './components/Section6';
+import Section7 from './components/Section7';
+import Section8 from './components/Section8';
+import Section9 from './components/Section9';
+import Section10 from './components/Section10';
 
 
 
@@ -42,10 +51,19 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/1F" element={<Firstfloor/>}/>
           <Route path="/1F/section1" element={<Section1/>}/>
+          <Route path="/1F/section2" element={<Section2/>}/>
           <Route path="/2F" element={<Secondfloor/>}/>
+          <Route path="/2F/section3" element={<Section3/>}/>
+          <Route path="/2F/section4" element={<Section4/>}/>
+          <Route path="/2F/section5" element={<Section5/>}/>
           <Route path="/3F" element={<Thirdfloor/>}/>
+          <Route path="/3F/section6" element={<Section6/>}/>
           <Route path="/4F" element={<Fourthfloor/>}/>
+          <Route path="/4F/section7" element={<Section7/>}/>
+          <Route path="/4F/section8" element={<Section8/>}/>
           <Route path="/5F" element={<Fifthfloor/>}/>
+          <Route path="/5F/section9" element={<Section9/>}/>
+          <Route path="/5F/section10" element={<Section10/>}/>
         </Routes>
       </BrowserRouter>
     </>
