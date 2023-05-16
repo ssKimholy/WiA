@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import sectionImg from "../imgs/f1s1.jpg";
+import Wifibox from './Wifibox';
 // import Section1 from './Section1';
 
 
@@ -132,75 +133,24 @@ function Section1() {
                 <SectionImg src={sectionImg} />
 
                 <WifiContainer>
-
-                    <Wifi>
-                        <WifiNumber>1</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-
-                    <Wifi>
-                        <WifiNumber>2</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-
-                    <Wifi>
-                        <WifiNumber>3</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-
-                    <Wifi>
-                        <WifiNumber>4</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-                    <Wifi>
-                        <WifiNumber>5</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-
-                    <Wifi>
-                        <WifiNumber>1</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-
-                    <Wifi>
-                        <WifiNumber>2</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-
-                    <Wifi>
-                        <WifiNumber>3</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-
-                    <Wifi>
-                        <WifiNumber>4</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-                    <Wifi>
-                        <WifiNumber>5</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
-
-
-                    <Wifi>
-                        <WifiNumber>1</WifiNumber>
-                        <WifiPeople>3명</WifiPeople>
-                    </Wifi>
                     
+                    <Wifibox wifiNumber={1} wifiPeople={2} />
 
+                    <Wifibox wifiNumber={2} wifiPeople={4} />
 
-                    
+                    <Wifibox wifiNumber={3} wifiPeople={5} />
 
-                    
+                    <Wifibox wifiNumber={4} wifiPeople={6} />
+
+                    <Wifibox wifiNumber={5} wifiPeople={10} />
+
+                    <Wifibox wifiNumber={6} wifiPeople={12} />
+
+                    <Wifibox wifiNumber={7} wifiPeople={15} />
+
+                    <Wifibox wifiNumber={8} wifiPeople={18} />
+
+                    <Wifibox wifiNumber={9} wifiPeople={21} />
                 </WifiContainer>
 
             </SecondContainer>
